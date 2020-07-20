@@ -1,0 +1,60 @@
+body {
+    background-image:radial-gradient(circle, cornflowerblue, coral) ;
+}
+
+.info {
+    margin: auto;
+    padding-top: 25px;
+}
+
+.nav {
+    background-image:radial-gradient(circle, coral, cornflowerblue) ;
+    padding-bottom: 25px;
+    box-shadow:6px 6px black;
+    border:inset cornflowerblue;
+    
+}
+.card-title {
+    text-align: center;
+    text-decoration: underline black;
+}
+
+#startButton {
+    color: black;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+}
+
+.card-title2 {
+    text-align: center;
+    text-decoration: underline black;
+}
+.card1 {
+    margin: auto;
+    height: 150px;
+    width: 250px;
+    margin-top: 25px;
+    border-radius: 20px;
+    box-shadow:6px 6px black;
+    border:inset cornflowerblue;
+    background-color: coral;  
+    padding-bottom: 50px;
+}
+
+#timer {
+    float: right;
+    padding-right: 50px;
+}
+
+
+.card2 {
+    margin: auto;
+    height: 250px;
+    width: 550px;
+    margin-top: 25px;
+    border-radius: 20px;
+    box-shadow:6px 6px black;
+    border:inset cornflowerblue;
+    background-color: coral;
+}
+
