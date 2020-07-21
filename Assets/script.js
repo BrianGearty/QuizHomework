@@ -23,7 +23,7 @@ $(document).ready(function () {
   {
     question: 'What kind of music did Miles Davis play?',
     answer: 'Jazz',
-    choices: ['Rock', "Jazz", "Funk"],
+    choices: ['Rock', "Jazz", "Punk"],
     userAnswer: ""
   },
   {
@@ -33,7 +33,7 @@ $(document).ready(function () {
     userAnswer: ""
   },
   {
-    question: 'What instrument does Stevie Wonder play?',
+    question: 'What is Stevie Wonders main instrument?',
     answer: 'Piano',
     choices: ['Guitar', "Piano", "Bass"],
     userAnswer: ""
@@ -41,17 +41,15 @@ $(document).ready(function () {
   {
     question: 'Who was NOT a member of the Beatles?',
     answer: 'Ravi Shankar',
-    choices: ['John Lennon', "Ravi Shankar", "George Harrison"],
+    choices: ['Ringo Starr', "Ravi Shankar", "George Harrison"],
     userAnswer: ""
   }
   ];
 // TIMER FUNCTION   
   function decTimer() {
-      clearInterval(intervalID);
-                                                                
-      intervalID = setInterval(function () {
+    intervalID = setInterval(function () {
       timer--;
-      $("#timer").html(timer);
+      $("#timer").text(timer);
 // CHECKING IF TIME RUNS OUT TO CLEAR & RESET
         if (timer === 0) {
         clearInterval(intervalID);
@@ -59,7 +57,7 @@ $(document).ready(function () {
           $("#timer").html('<h2>Time is up!</h2>');
           reset();                                                    
       }
-    }, 1000);
+    }, 700);
   };
 // DISPLAY QUESTIONS FUNCTION
   function displayQuestion() {
@@ -72,7 +70,7 @@ $(document).ready(function () {
       choicesButton.text(singleAnswer);
       choicesButton.addClass("choice");
         $("#quiz-form").append(choicesButton);
-       $(".choice").attr("style", "display: block", "background-color: cornflowerblue", "border-radius: 10px");
+       $(".choice").css({"display": "block", "background-color": "burlywood", "border-radius": "10px", "font-family":"Fondamento, cursive"});
 
     })
   }
@@ -81,19 +79,16 @@ $(document).ready(function () {
     var userAnswer = $(this).text()
     var correctAnswer = questions[questionIndex].answer
 
-  // CHECKING USER ANSWER 
-    if (userAnswer == correctAnswer) {
-      correct++;
-      console.log(correct)
-      
-    } else { 
-      incorrect++;
-      timer = timer - 10;
-      console.log(incorrect)
-      
-    }
-    
-  // CHECKING IF ALL QUESTIONS ANSWERED TO RESET
+// CHECKING USER ANSWER 
+      if (userAnswer == correctAnswer) {
+        correct++;
+        console.log(correct);
+      } else {
+        incorrect++;
+        timer = timer - 10;
+        console.log(incorrect);
+      }
+// CHECKING IF ALL QUESTIONS ANSWERED TO RESET
     questionIndex++
     if(questions.length === questionIndex){
       userInfo();
@@ -110,30 +105,29 @@ $("#startButton").on("click", function () {
    
   })
 
-// reset function should ask to prompt initials and save local storage and then start the game over
-function reset() {
-  clearInterval(intervalID);
-  $("#quiz-form").html(" ");
-  $("#timer").html(" ");
-  
+// RESET FUNCTION 
+  function reset() {
+    clearInterval(intervalID);
+    $("#quiz-form").html(" ");
+    $("#timer").html(" ");
+      questionIndex = 0;
+      timer = 70;
+      correct = 0;
+      incorrect = 0;
   }
-
+  
+  
+// TAKING USER'S INFO FUNCTION
 function userInfo() {
-  var userScore = correct - incorrect;
-  var userName = prompt("Put your name here to see your score!")
+  var userScore = correct + "/5";
+  var userName = prompt("Type your name here to see your score!")
   var userInitials = userName + "'s" + " Score: " + userScore;
   console.log(userInitials);
   $("#quiz-form").text(userInitials);
- 
-   
   $("#timer").html(" ");
   clearInterval(intervalID);
 }
 reset();
 
-
-
-
-
-
 })
+

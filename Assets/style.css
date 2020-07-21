@@ -1,33 +1,59 @@
 body {
-    background-image:radial-gradient(circle, cornflowerblue, coral) ;
+    background-image:url("./miles.png") ;
+    background-size: 360px 650px  ;
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-position: right bottom;
+    margin-bottom: 225px;
+    background-color: rgb(3, 3, 3);
+
 }
 
 .info {
     margin: auto;
-    padding-top: 25px;
+    padding-top: 2px;
+    font-family: 'Rouge Script', cursive;
+    color: burlywood;
+    text-shadow:4px 4px black;
+    font-size: 60px;
+    font-weight: bold;
+   
 }
 
 .nav {
-    background-image:radial-gradient(circle, coral, cornflowerblue) ;
-    padding-bottom: 25px;
-    box-shadow:6px 6px black;
-    border:inset cornflowerblue;
+    background-image:url("./fadedbackground.jpg") ;
+    background-size: cover;
+    padding-bottom: 20px;
+    border-bottom: inset burlywood;
+    
     
 }
 .card-title {
     text-align: center;
-    text-decoration: underline black;
+    font-family: 'Rouge Script', cursive;
+    color: black;
+    font-size: 40px;
+    
+    
+
 }
 
 #startButton {
     color: black;
-    background-color: cornflowerblue;
-    border-radius: 10px;
+    background-color:burlywood;
+    border-radius: 5px;
+    font-family: 'Rouge Script', cursive;
+    width: 60px;
+
 }
 
 .card-title2 {
     text-align: center;
-    text-decoration: underline black;
+    font-family: 'Rouge Script', cursive;
+    color:black;
+    font-size: 40px;
+    
+    
 }
 .card1 {
     margin: auto;
@@ -35,15 +61,15 @@ body {
     width: 250px;
     margin-top: 25px;
     border-radius: 20px;
-    box-shadow:6px 6px black;
-    border:inset cornflowerblue;
-    background-color: coral;  
+    box-shadow:6px 6px burlywood;
+    background-image: url("./paperbackground.jpg"); 
     padding-bottom: 50px;
 }
 
 #timer {
     float: right;
     padding-right: 50px;
+    font-family: 'Rouge Script', cursive;
 }
 
 
@@ -53,8 +79,11 @@ body {
     width: 550px;
     margin-top: 25px;
     border-radius: 20px;
-    box-shadow:6px 6px black;
-    border:inset cornflowerblue;
-    background-color: coral;
+    box-shadow:6px 6px burlywood;
+    background-image: url("./paperbackground.jpg"); 
 }
 
+#quiz-form {
+    font-family: 'Fondamento', cursive;
+    font-size: 20px;
+}
