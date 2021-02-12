@@ -82,11 +82,9 @@ $(document).ready(function () {
 // CHECKING USER ANSWER 
       if (userAnswer == correctAnswer) {
         correct++;
-        console.log(correct);
       } else {
         incorrect++;
         timer = timer - 10;
-        console.log(incorrect);
       }
 // CHECKING IF ALL QUESTIONS ANSWERED TO RESET
     questionIndex++
@@ -127,7 +125,6 @@ function userInfo() {
   }
   var userName = prompt("Type your name here to see your score!")
   var userInitials = userName + "'s" + " Score: " + userScore + '%';
-  console.log(userInitials);
   $("#quiz-form").text(userInitials);
   $("#timer").html(" ");
   clearInterval(intervalID);
