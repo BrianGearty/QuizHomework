@@ -17,7 +17,7 @@ body {
     text-shadow:4px 4px black;
     font-size: 60px;
     font-weight: bold;
-   
+
 }
 
 .nav {
@@ -60,8 +60,7 @@ body {
     height: 150px;
     width: 250px;
     margin-top: 25px;
-    border-radius: 20px;
-    box-shadow:6px 6px burlywood;
+    border-radius: 5px;
     background-image: url("./paperbackground.jpg"); 
     padding-bottom: 50px;
 }
@@ -78,8 +77,7 @@ body {
     height: 250px;
     width: 550px;
     margin-top: 25px;
-    border-radius: 20px;
-    box-shadow:6px 6px burlywood;
+    border-radius: 5px;
     background-image: url("./paperbackground.jpg"); 
 }
 

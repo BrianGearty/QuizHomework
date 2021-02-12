@@ -7,9 +7,9 @@ $(document).ready(function () {
   var incorrect = 0;
   
 
-  // SET TIMER
+  // SET TIMER 
   var timer = 70;
-  var intervalID;
+  var intervalID;  
   
   
   var questionIndex = 0
@@ -23,13 +23,13 @@ $(document).ready(function () {
   {
     question: 'What kind of music did Miles Davis play?',
     answer: 'Jazz',
-    choices: ['Rock', "Jazz", "Punk"],
+    choices: ['Rock', "Punk", "Jazz"],
     userAnswer: ""
   },
   {
     question: 'How many strings are on a guitar?',
     answer: '6',
-    choices: ['4', "5", "6"],
+    choices: ["6", '4', "5"],
     userAnswer: ""
   },
   {
@@ -70,7 +70,7 @@ $(document).ready(function () {
       choicesButton.text(singleAnswer);
       choicesButton.addClass("choice");
         $("#quiz-form").append(choicesButton);
-       $(".choice").css({"display": "block", "background-color": "burlywood", "border-radius": "10px", "font-family":"Fondamento, cursive"});
+      $(".choice").css({"display": "block", "background-color": "burlywood", "border-radius": "10px", "font-family":"Fondamento, cursive"});
 
     })
   }
@@ -111,7 +111,7 @@ $("#startButton").on("click", function () {
     $("#quiz-form").html(" ");
     $("#timer").html(" ");
       questionIndex = 0;
-      timer = 70;
+      timer = 60;
       correct = 0;
       incorrect = 0;
   }
@@ -119,9 +119,14 @@ $("#startButton").on("click", function () {
   
 // TAKING USER'S INFO FUNCTION
 function userInfo() {
-  var userScore = correct + "/5";
+  if(correct < 5){
+  var userScoreMath = correct/5;
+  var userScore = userScoreMath.toFixed(2).split("0.")[1]
+  } else {
+    var userScore = 100
+  }
   var userName = prompt("Type your name here to see your score!")
-  var userInitials = userName + "'s" + " Score: " + userScore;
+  var userInitials = userName + "'s" + " Score: " + userScore + '%';
   console.log(userInitials);
   $("#quiz-form").text(userInitials);
   $("#timer").html(" ");
